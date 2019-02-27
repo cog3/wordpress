@@ -1,4 +1,6 @@
 <?php
+
+ini_set('memory_limit','128M'); // set memory to prevent fatal errors
 /**
  * Object Cache API
  *

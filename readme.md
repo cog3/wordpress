@@ -25,14 +25,21 @@ Link: https://dev.mysql.com/downloads/installer/
    Port = 3306 or 80
 3) USE LEGACY AUTHORIZATION METHOD 
     ALWAYS REMEMBER YOUR MYSQL PASSWORD
-    
-4) Finalize Setup & Execute Configurations
+    4) Finalize Setup & Execute Configurations
 
 ###### **Create Web Server Database**
-1) Open New Project in PHPStorm
-2) 
+1) Create New PHP Empty Project in PHPStorm
+2) When in New Project, on the top right corner of PhpStorm click "Add Configuration"....
+3) You will be taken to this screen, you are to drop down the menu on the left and select PHP Built-In Web Server
+	- When Setting this up, the document root is the directory of the current project you are in
 
-
-
-
-
+###### **wp-config-sample.php ----> wp-config.php**
+	Take wp-config-sample.php and copy that into a new .php file names wp-config.php.
+	Read the Documentation... then follow instructions
+	DB_NAME = 'wordpress'
+	DB_USER = 'root'
+	DB_PASSWORD = 'password'
+		DISCLAIMER: IT DEPENDS ON WHAT USERNAME/PASSWORD YOU USED FOR YOUR MYSQL LOGIN. WE RECOMMEND KEEPING IT SIMPLE WITH JUST......
+		username = root
+		password  = password
+	DB_HOST = 'localhost' or '127.0.0.1'
