@@ -34,8 +34,8 @@ Link: https://dev.mysql.com/downloads/installer/
 	- When Setting this up, the document root is the directory of the current project you are in
 
 ###### **wp-config-sample.php ----> wp-config.php**
-	Take wp-config-sample.php and copy that into a new .php file names wp-config.php.
-	Read the Documentation... then follow instructions
+Take wp-config-sample.php and copy that into a new .php file names wp-config.php.
+Read the Documentation... then follow instructions
 	DB_NAME = 'wordpress'
 	DB_USER = 'root'
 	DB_PASSWORD = 'password'
@@ -44,7 +44,7 @@ Link: https://dev.mysql.com/downloads/installer/
 		password  = password
 	DB_HOST = 'localhost' or '127.0.0.1'
 	
-###### **Modify MySQL Database**
+###### **Connect to MySQL**
 1) Click on the Database tab on the right of PHP Storm
 2) Click on the '+' button, under the Data Source drop-down menu, click on MySQL
 3) It is time to connect to your MySQL Database. Enter your respective Credentials...
@@ -56,7 +56,21 @@ Link: https://dev.mysql.com/downloads/installer/
 	User = root
 	Password = ***Your MySQL Database Password*** We recomment it just being 'password'..
 
-	**Test the connection and make sure it succesfully passes then click 'OK'** 
+*Test the connection and make sure it succesfully passes then click 'OK'* 
 
-######    
+###### **Create MySQL Database & Permissions**
+Click on the same Database tab on the right of the window. Right click on the Data Source and click 'Open Console'. Here is where you will be writing your MySQL code. 
+
+You will execute the following....
+
+
+CREATE DATABASE wordpress;
+CREATE USER "wordpress"@"localhost" IDENTIFIED WITH mysql_native_password BY 'password';
+GRANT ALL PRIVILEGES ON wordpress.* TO "wordpress"@"localhost";
+FLUSH PRIVILEGES;
+
+***YOU ARE NOT TO EXECUTE ENTIRE BLOCK OF CODE MORE THAN ONCE. EXECUTE 'FLUSH PRIVILEGES' FOR EVERY INSTANCE.***
+
+Run this code and you should connect to localhost. 
+    
 
