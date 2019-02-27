@@ -43,3 +43,20 @@ Link: https://dev.mysql.com/downloads/installer/
 		username = root
 		password  = password
 	DB_HOST = 'localhost' or '127.0.0.1'
+	
+###### **Modify MySQL Database**
+1) Click on the Database tab on the right of PHP Storm
+2) Click on the '+' button, under the Data Source drop-down menu, click on MySQL
+3) It is time to connect to your MySQL Database. Enter your respective Credentials...
+	Name = localhost or Wordpress
+		***Doesnt Matter***
+	Host = localhost
+	Database = wordpress 
+		***Whatever you want to call this is fine. Just remember to name the database such when writing your MySQL Code***
+	User = root
+	Password = ***Your MySQL Database Password*** We recomment it just being 'password'..
+
+	**Test the connection and make sure it succesfully passes then click 'OK'** 
+
+######    
+
