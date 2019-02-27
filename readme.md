@@ -74,3 +74,17 @@ FLUSH PRIVILEGES;
 Run this code and you should connect to localhost. 
     
 
+###### **OH SNAP, it doesn't let me connect..**
+
+You may need to modify your php.ini file
+
+Uncomment the MySQli line and change maximum_execution_time = 90
+
+Reason being.... php.ini is the initialization file of Php. Out of the box, Php does not support the execution of MySQL. Since you are merely using Php as a compiler for MySQL... you need to increse the execution time for your Php programs to be able to connect to your database. 
+
+If you keep getting an error connecting to WordPress... try re-running the MySQL script by creating a new database like 'wordpressXYZ'...
+
+
+
+
+
